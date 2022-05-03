@@ -22,6 +22,7 @@
 {% block main %}
 <div class="container-sm" id="contact">
     <p class="fs-1">Contact</p>
+    {{{% include "notify.html" %}}}
     <form method="post">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -45,9 +46,3 @@
     </form>
 </div>
 {% endblock %}
-
-<!-- 
-name
-email
-subject
-msg -->
