@@ -5,16 +5,16 @@
 
 {% block head %}
 <style>
-    button.btn{
-        color:white;
+    button.btn {
+        color: white;
         background-color: green;
         border: 1px solid gray;
     }
-    button.btn:hover{
-        background-color: rgb(1, 103, 1);
-        color:white;
-    }
 
+    button.btn:hover {
+        background-color: rgb(1, 103, 1);
+        color: white;
+    }
 </style>
 {% endblock %}
 
@@ -22,15 +22,17 @@
 {% block main %}
 <div class="container-sm" id="contact">
     <p class="fs-1">Contact</p>
-    {{{% include "notify.html" %}}}
+    {% include "notify.html" %}
     <form method="post">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="John Doe" required minlength="2" autocomplete="false">
+            <input type="text" class="form-control" name="name" id="name" placeholder="John Doe" required minlength="2"
+                autocomplete="false">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required autocomplete="false">
+            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required
+                autocomplete="false">
         </div>
         <div class="mb-3">
             <label for="subject" class="form-label">Subject</label>
@@ -38,10 +40,11 @@
         </div>
         <div class="mb-3">
             <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="3" required minlength="2" autocomplete="false"></textarea>
+            <textarea class="form-control" id="message" name="message" rows="3" required minlength="2"
+                autocomplete="false"></textarea>
         </div>
         <div class="d-flex justify-content-end">
-            <button class="btn fs-4"type="submit">Submit</button>
+            <button class="btn fs-4" type="submit">Submit</button>
         </div>
     </form>
 </div>

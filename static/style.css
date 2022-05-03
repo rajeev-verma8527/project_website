@@ -22,3 +22,11 @@ body{
 .main{
     padding-top: 80px;
 }
+.success{
+    background-color: rgb(2, 139, 2);
+    border: 1px solid green;
+    color:white;
+}
+#contact{
+    max-width: 800px;
+}

@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
 
+app.secret_key = "key"
 
 @app.route("/")
 def index():
@@ -17,7 +18,8 @@ def contact():
         subject = f.get("subject")
         message = f.get("message")
         ## TODO Save data
-        return redirect(url_for('index'))
+        flash("Message sent", category="success")
+        # return redirect(url_for("index"))
     return render_template("contact.html")
 
 
