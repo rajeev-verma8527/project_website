@@ -4,6 +4,12 @@ app = Flask(__name__)
 
 app.secret_key = "key"
 
+city_templates = {
+    "agra" : ["taj",],
+    "lucknow" : ["imambara",],
+}
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -26,3 +32,11 @@ def contact():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/cities/<city>")
+def cities(city):
+    return render_template("album_layout.html",locations=["cities/agra/taj.html"])
+
+# @app.route("/locations/<location>")
+# def locations(location):
+#     pass
