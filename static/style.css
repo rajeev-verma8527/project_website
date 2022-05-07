@@ -1,32 +1,46 @@
-.navbar{
-    background-color:rgba(255, 255, 255, 0.94);
-    border-bottom: 3px solid black;
-    backdrop-filter: blur(10px);
-    color: #000;
+.navbar {
+  background-color: rgba(255, 255, 255, 0.94);
+  border-bottom: 3px solid black;
+  backdrop-filter: blur(10px);
+  color: #000;
 }
-a.nav-link:any-link{
-    color:black;
-    border-radius: 2px;
+a.nav-link:any-link {
+  color: black;
+  border-radius: 2px;
 }
-a.nav-link{
-    font-family: 'Titillium Web', sans-serif;
+a.nav-link {
+  font-family: "Titillium Web", sans-serif;
 }
 
-a.nav-link:hover{
-    color: white;
-    background-color: black;
+a.nav-link:hover {
+  color: white;
+  background-color: black;
 }
-body{
-   background-color: rgb(229, 242, 250); 
+body {
+  background-color: rgb(229, 242, 250);
 }
-.main{
-    padding-top: 80px;
+.main {
+  padding-top: 80px;
 }
-.success{
-    background-color: rgb(2, 139, 2);
-    border: 1px solid green;
-    color:white;
+.success {
+  background-color: rgb(2, 139, 2);
+  border: 1px solid green;
+  color: white;
 }
-#contact{
-    max-width: 800px;
+#contact {
+  max-width: 800px;
+}
+button.btn {
+  color: white;
+  background-color: green;
+  border: 1px solid gray;
+}
+
+button.btn:hover {
+  background-color: rgb(1, 103, 1);
+  color: white;
+}
+
+p#head{
+  font-family: 'Oregano', cursive;
 }
