@@ -1,22 +1,6 @@
-{% extends "base.html" %}
-
-
-{% block title %}
-    {% if title %}
-        {{title}}
-    {% else %}
-        Album
-    {% endif %}
-{% endblock title %}
-
-{% set location_layout_template="cities/card_layout.html" %}
-
-{% block main %}
-{% if locations %}
+{% set card=True %}
 <div class="row">
     {% for template in locations %}
             {% include template %}
     {% endfor %}
 </div>
-{% endif %}
-{% endblock main %}

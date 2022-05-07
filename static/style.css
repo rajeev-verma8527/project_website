@@ -44,3 +44,13 @@ button.btn:hover {
 p#head{
   font-family: 'Oregano', cursive;
 }
+
+img.card-img-top{
+  object-fit: cover;
+  height: 20em;
+}
+
+img.img-fluid{
+  object-fit: cover;
+  height: 50em;
+}

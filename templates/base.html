@@ -39,9 +39,15 @@
                             Cities
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Lucknow</a></li>
-                            <li><a class="dropdown-item" href="#">Agra</a></li>
-                            <li><a class="dropdown-item" href="#">Delhi</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='agra')}}">Agra</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='ayodhya')}}">Ayodhya</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='fatehpur_sikri')}}">Fatehpur Sikri</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='kanpur')}}">Kanpur</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='kushinagar')}}">Kushinagar</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='lucknow')}}">Lucknow</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='mathura_and_vrindavan')}}">Mathura and Vrindavan</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='prayagraj')}}">Prayagraj</a></li>
+                            <li><a class="dropdown-item" href="{{url_for('cities',city='varanasi_and_sarnath')}}">Varanasi and Sarnath</a></li>
                         </ul>
                     </div>
                     <div class="nav-item"><a href="{{url_for('contact')}}" class="nav-link">Contact</a></div>
@@ -49,9 +55,10 @@
                 </div>
         </nav>
 
-        <div class="main container-fluid">
+        <div class="main container-fluid mb-4">
             {% block main %}{% endblock %}
 
+            
         </div>
 
     </div>

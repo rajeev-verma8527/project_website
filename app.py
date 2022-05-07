@@ -1,19 +1,39 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from database import save_info
+from aggregate_templates import get_tree
+import os
 
 app = Flask(__name__)
 
 app.secret_key = "key"
 
-city_templates = {
-    "agra": ["taj",],
-    "lucknow": ["imambara",],
-}
-
+city_templates = get_tree(os.getcwd())
+all_locations = []
+for city in city_templates:
+    for loc in city_templates[city]:
+        all_locations.append(f"cities/{city}/{loc}")
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html",locations=all_locations)
+
+@app.route("/cities/<city>")
+def cities(city):
+    if city in city_templates:
+        locations = [f"cities/{city}/{i}" for i in city_templates[city]]
+        return render_template(f"cities/{city}/main.html", locations=locations, title=city.title())
+    return render_template("error.html"), 404
+
+@app.route("/locations/<location>")
+def locations(location):
+    for city,locations in city_templates.items():
+        if (location + ".html") in locations:
+            return render_template(f"cities/{city}/{location}.html")
+    return render_template("error.html"), 404 
+
+
+
+
 
 
 @app.route("/contact", methods=["GET", "POST"])
@@ -35,11 +55,6 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/cities/<city>")
-def cities(city):
-    return render_template("album_layout.html", locations=["cities/agra/taj.html"])
-
-
-# @app.route("/locations/<location>")
-# def locations(location):
-#     pass
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('error.html'), 404

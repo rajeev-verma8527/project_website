@@ -1,4 +1,16 @@
 {% extends "base.html" %}
 
+{% block title %}
+{{self.name()}}
+{% endblock %}
 
 
+{% block main %}
+<div class="text-center">
+    <p class="fs-1 ">{% block name %}{% endblock %}</p>
+    <p class="fs-2 text-muted">{% block city %}{% endblock %}</p>
+    <img src="{% block img %}{% endblock %}" class="img-fluid border border-4 rounded" alt=""
+        style="max-height: 50rem;">
+    <p class="fs-5">{% block desc %}{% endblock %}</p>
+</div>
+{% endblock %}

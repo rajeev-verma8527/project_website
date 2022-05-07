@@ -1,17 +1,10 @@
-<div class="col-sm-6 col-md-4">
-    <div class="card m-2">
-        <img src="{% block source %}{% endblock %}" class="card-img-top" alt="...">
-        <span class="ms-auto text-muted"
-            style="transform: translate(0px,-15px); font-size: x-small;background-color: rgb(255, 255, 255,0.2);">
-            {% block credit %}{% endblock %}
-            </span>
-        <div class="card-body pt-0">
-            <h5 class="card-title">{% block name %}{% endblock %}
-            </h5>
-            <h6 class="card-subtitle mb-2 text-muted">{% block city %}{% endblock %}
-            </h6>
-            <p class="card-text">{% block summary %}{% endblock %}
-            </p>
+<div class="col-md-6 col-lg-4">
+    <div class="card">
+        <img src="{% block img %}{% endblock %}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{% block name %}{% endblock %}</h5>
+            <p class="card-subtitle text-muted mb-2">{% block city %}{% endblock %}</p>
+            <a href="{% block link %}{% endblock %}" class="btn bg-success text-white">View</a>
         </div>
     </div>
 </div>
