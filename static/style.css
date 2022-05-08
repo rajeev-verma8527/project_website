@@ -50,7 +50,7 @@ img.card-img-top{
   height: 20em;
 }
 
-img.img-fluid{
+img.full_layout{
   object-fit: cover;
-  height: 50em;
+  max-height: 50em;
 }

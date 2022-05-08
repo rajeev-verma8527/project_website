@@ -1,0 +1,30 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/archiecture-akbars-tomb.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Akbar Tomb{% endblock %}
+
+{% block city %}Agra{% endblock %}
+
+{% block desc %}
+Akbar's tomb is the tomb of the Mughal emperor Akbar. It was built in 1605-1613 by his son Jahangir and is situated in 119 acres of grounds in Sikandra, a sub of Agra, Uttar Pradesh, India.
+The tomb of Akbar is done in typical style and symmetry of various monuments during the Mughal era. This monument is the perfect symbol of Mughal architecture.
+{% endblock %}

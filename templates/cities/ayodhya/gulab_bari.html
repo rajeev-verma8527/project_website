@@ -1,0 +1,37 @@
+{% if card %}
+{% extends "cities/card_layout.html" %}
+{% else %}
+{% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/gulab-bari.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Gulab Bari{% endblock %}
+
+{% block city %}Ayodhya{% endblock %}
+
+{% block desc %}
+One of the most popular tourist attractions of Faizabad, the Gulab Bari is a charming lush green garden, home to the
+magnificent tomb of Nawab Shuja-ud-Daula, the third nawab of Avadh, who ruled between 1753 and 1775. This tourist
+stopover is noted for its wide variety of roses, which draw nature lovers and botanists from all parts of the country.
+Gulab Bari was used to host significant religious functions during the nawab's reign. <br><br> Built in the Islamic style of
+architecture, the imposing tomb is one of the best designed monuments in Uttar Pradesh. As you enter the garden, a large
+pillar with India's National Emblem welcomes you. A well-maintained walkway lined with swaying coconut trees on either
+sides leads you to an ancient arched gateway. <br><br> To enter the garden, you need to pass through this imposing gateway. The
+garden also houses a beautiful mosque and a small watchtower that stands right next to the mosque. Walking through the
+arched passages of the tomb makes for a fascinating experience.
+{% endblock %}

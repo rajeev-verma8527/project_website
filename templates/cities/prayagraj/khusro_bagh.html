@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Tomb_of_Nisar_Begum_at_Khusro_Bagh_Allahabad.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Khusro Bagh{% endblock %}
+
+{% block city %}Prayagraj{% endblock %}
+
+{% block desc %}
+Khusro Bagh is a large historical garden, in which tombs of Prince Khusro, the eldest son of Emperor Jahangir and Sultan Begum are located. The three sandstone mausoleums within this walled garden, represent an exquisite example of Mughal architecture.
+{% endblock %}

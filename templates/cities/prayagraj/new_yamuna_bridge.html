@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/yammuna-bridge.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}The New Yamuna Bridge{% endblock %}
+
+{% block city %}Prayagraj{% endblock %}
+
+{% block desc %}
+The New Yamuna Bridge is a cable-stayed bridge located in Allahabad. The bridge was constructed by the end of 2004 with the aim of minimizing the traffic over the Old Naini Bridge. The bridge runs north-south across the Yamuna river connecting the city of Prayagraj to its neighborhood of Naini BRIDGE.
+{% endblock %}

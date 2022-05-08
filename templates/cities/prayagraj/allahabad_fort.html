@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Allahabad-Fort.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Allahabad Fort{% endblock %}
+
+{% block city %}Prayagraj{% endblock %}
+
+{% block desc %}
+Allahabad Fort is a splendid work of architecture that was built during the reign of Akbar, the Mughal Emperor in 1583. The marvellous structure is located on the banks of the confluence of the Rivers Ganga and Yamuna and is well-known for being the largest fort ever built by Akbar.
+{% endblock %}

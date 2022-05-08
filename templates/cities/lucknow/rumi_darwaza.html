@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/rumi-darwaza.avif') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Rumi Darwaza{% endblock %}
+
+{% block city %}Lucknow{% endblock %}
+
+{% block desc %}
+The darwaza boasts intricate carvings of flowers. In its prime, the gateway had a huge lantern at the top, which would be lit at night, with jets of water flowing from the arch. For first-time visitors to the city, Rumi Darwaza is a must-see.
+{% endblock %}

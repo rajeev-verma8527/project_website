@@ -1,0 +1,38 @@
+{% if card %}
+{% extends "cities/card_layout.html" %}
+{% else %}
+{% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Ayodhya ghat.jpeg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Ayodhya Ghats{% endblock %}
+
+{% block city %}Ayodhya{% endblock %}
+
+{% block desc %}
+Ayodhya is an ancient city of India near Faizabad in Uttar Pradesh state. The city is situated on the right bank of
+river Ghagra or Saryu. It is considered as one of the holiest cities of India. In the epic Ramayana the city of Ayodhya
+is cited as the birth place of lord Rama. It is dotted with numerous temples and worship places of many other religions.
+Several religious simultaneously have grown and prospered here at different periods of time. Remnants of Hinduism,
+Buddhism, Jainism, Islam, and Sikhism are found in Ayodhya. <br><br>
+It is widely held belief that Gautama Buddha visited Ayodhya on several occasions.
+Five Thirthankars of Jain religion were born here and they preached their religious values here as well. Ayodhya was
+once an important place during Buddhist periods and has been written much about by Chinese travelers Hiuen-Tsang &
+Fai-hein. The city was also visited by Sikh gurus. Guru Nanak Dev, Guru Tej Bahadur, Guru Govind Singh and because of
+this, Ayodhya has many Gurudwaras which attract Sikh devotees from all over India.
+{% endblock %}

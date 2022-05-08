@@ -1,0 +1,28 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/CHOTAIMMAMBARA.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Chota Imambara{% endblock %}
+
+{% block city %}Lucknow{% endblock %}
+
+{% block desc %}The Chhota Imambara was initially a congregation hall for Shia Muslims that was built by Muhammad Ali Shah, who was the third Nawab of Awadh, in 1838. The Imambara was to serve as his own mausoleum as well as that of his mother, who is buried beside him in this prestigious monument.
+{% endblock %}

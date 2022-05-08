@@ -1,0 +1,32 @@
+{% if card %}
+{% extends "cities/card_layout.html" %}
+{% else %}
+{% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Victoria_mem_alfred.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Victoria Memorial at Alfred Park{% endblock %}
+
+{% block city %}Prayagraj{% endblock %}
+
+{% block desc %}
+Chandrashekhar Azad Park (also known by its former name Alfred Park, and Company Bagh during the Company Raj) is a
+public park in Prayagraj, Uttar Pradesh, India. Built in 1870 to mark Prince Alfred's visit to the city, with an area of
+133 acres, it is the biggest park in Prayagraj.[2][3] It was renamed by the Uttar Pradesh Government after freedom
+fighter Chandra Shekhar Azad, who sacrificed his life here, during the Indian independence struggle in 1931.
+{% endblock %}
