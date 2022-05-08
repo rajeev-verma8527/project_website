@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Kanpur_Sangrahalaya.jfif') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Kanpur Museum{% endblock %}
+
+{% block city %}Kanpur{% endblock %}
+
+{% block desc %}
+Kanpur Sangrahalaya / Kanpur Museum is the official museum in Kanpur, the industrial hub of Uttar Pradesh, India. It was built by the British as King Edward Memorial Hall in honour of Edward VII. It is a storehouse of artifacts and exhibits that tell the story of the events and people who have influenced the making of Kanpur city, and tell many interesting details about the historical past of the city.
+{% endblock %}

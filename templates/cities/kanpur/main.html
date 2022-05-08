@@ -1,12 +1,21 @@
 {% extends "base.html" %}
 
 {% block title %}
-
+Kanpur
 {% endblock %}
 
 {% block main %}
 
+<div class="container">
+    <p class="fs-2">{{self.title()}}</p>
+    <p class="fs-5">
+        Nestled on the banks of Ganges River, Kanpur stands as the major financial and industrial centre of North India
+        and also the ninth-largest urban economy in India. Today it is famous for its colonial architecture, gardens,
+        parks and fine quality leather products which are exported mainly to the West.
+    </p>
 
-{% include "album_layout.html" %}
+
+    {% include "album_layout.html" %}
+</div>
 
 {% endblock %}

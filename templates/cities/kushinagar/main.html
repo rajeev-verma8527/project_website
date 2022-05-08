@@ -1,12 +1,23 @@
 {% extends "base.html" %}
 
 {% block title %}
-
+Kushinagar
 {% endblock %}
 
 {% block main %}
 
+<div class="container">
+    <p class="fs-2">{{self.title()}}</p>
+    <p class="fs-5">
+        Kushinagar is a town in the Kushinagar district in Uttar Pradesh, India.
+        The archeological findings in the town date back to the 3rd century BC and belong to the Mauryan Emperor Ashoka.
+        Kushinagar today is a major pilgrimage center for the Buddhists in India and also finds mention in the writings
+        of the Chinese traveler and pilgrim Hieun Tsang. It was at Kushinagar that Gautama Buddha attained the
+        Mahaparinirvana.
+    </p>
 
-{% include "album_layout.html" %}
+
+    {% include "album_layout.html" %}
+</div>
 
 {% endblock %}

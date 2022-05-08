@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Mahasukhamdada Chin Thargyi Pagoda.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Mahasukhamdada Chin Thargyi Pagoda{% endblock %}
+
+{% block city %}Kushinagar{% endblock %}
+
+{% block desc %}
+This white, octagonal temple is topped by a graceful golden spire. The peaceful vibe is thrown off a bit by the somewhat creepy statues of pilgrims circumambulating the temple.
+{% endblock %}

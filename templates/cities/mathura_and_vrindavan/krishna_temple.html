@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Mathura_Temple-Mathura-India0002.jfif') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Krishna temple{% endblock %}
+
+{% block city %}Mathura{% endblock %}
+
+{% block desc %}
+The Krishna Janmasthan, at Mathura,  is important because this is where Lord Shri Krishna manifested Himself in the prison house of the cruel king Kansa and set free his father Vasudeva and his mother Devaki. His purpose was to destroy evil, protect the virtuous, and establish righteousness on a firm footing. Adjacent to the entrance of the prison cell, stands the temple where Astabhuja Maa Yogmaya manifested. The divine ambience of the sanctum sanctorum thrills the hearts of the devotees as soon as they enter the auspicious place, and a sense of conviction surges in their minds that this indeed is the place where Lord Krishna manifested Himself. He gave mankind extraordinary and thought provoking ideas, in the Sacred Scripture, The Bhagavata Gita. The Bhagavat Gita lays the basis of how life should be led in the various walks that govern our life on this earth,  as our soul is immortal.
+{% endblock %}

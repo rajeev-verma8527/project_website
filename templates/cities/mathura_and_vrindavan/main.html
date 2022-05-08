@@ -1,12 +1,22 @@
 {% extends "base.html" %}
 
 {% block title %}
-
+Mathura and Vrindavan
 {% endblock %}
 
 {% block main %}
 
+<div class="container">
+    <p class="fs-2">{{self.title()}}</p>
+    <p class="fs-5">
+        Mathura is a holy city in Hinduism and is considered the heart of Brij Bhoomi, the land of Krishna. The
+        twin-city to Mathura is Vrindavan. There are many places of historic and religious importance in Mathura and its
+        neighbouring towns.
+        It's home to temples, many dedicated to Krishna and his lover, the deity Radha.
+    </p>
 
-{% include "album_layout.html" %}
+
+    {% include "album_layout.html" %}
+</div>
 
 {% endblock %}

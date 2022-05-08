@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/JK Temple.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}JK Temple{% endblock %}
+
+{% block city %}Kanpur{% endblock %}
+
+{% block desc %}
+JK Temple (Juggilal Kamlapat temple) is a Hindu temple in the Indian city of Kanpur, Uttar Pradesh, India.It is considered to be a unique blend of ancient and modern architecture. The mandapa of the temple has been constructed with high roof for adequate ventilation of light and air. The temple was constructed by JK Trust and major maintenance expenses of the temple also comes from the trust fund. The temple is also popularly known as Radhakrishna Temple.
+{% endblock %}

@@ -1,0 +1,30 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/kanpur_memorial_church.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Kanpur Memorial Church{% endblock %}
+
+{% block city %}Kanpur{% endblock %}
+
+{% block desc %}
+The Kanpur Memorial Church, originally known as the All Souls' Church, is a church located in Kanpur, India that belongs to the Church of North India, a united Protestant denomination. It was built in 1875 in honour of British valour during the Siege of Cawnpore in 1857.
+The church is situated on Albert Lane near Cawnpore Club in Kanpur Cantonment. It is situated in the heart of the cantonment.
+{% endblock %}

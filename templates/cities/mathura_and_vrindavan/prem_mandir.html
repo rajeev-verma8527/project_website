@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/PremMandirSideViewFromCanteen.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Prem Mandir{% endblock %}
+
+{% block city %}Vrindavan{% endblock %}
+
+{% block desc %}
+Prem Mandir (lit. The Temple of Love) is a Hindu temple in Vrindavan, Mathura, Uttar Pradesh, India. It is maintained by Jagadguru Kripalu Parishat, an international non-profit, educational, spiritual, charitable trust. The complex is on a 55-acre site on the outskirts of Vrindavan. It is dedicated to Radha Krishna and Sita Ram. Radha Krishna are on the first level and Sita Ram are on the second level. The temple was established by the fifth Original Jagadguru Shri Kripalu Ji Maharaj.[1] Different Leelas of Shri Krishna and Rasik saints are depicted all over the wall of the main temple.
+{% endblock %}

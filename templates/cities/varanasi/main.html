@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+Varanasi
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <p class="fs-2">{{self.title()}}</p>
+    <p class="fs-5">
+        The city is a centre of arts and crafts and of music and dance. Varanasi is famous for its production of silks
+        and brocades with gold and silver threadwork. 
+    </p>
+
+
+    {% include "album_layout.html" %}
+</div>
+
+{% endblock %}

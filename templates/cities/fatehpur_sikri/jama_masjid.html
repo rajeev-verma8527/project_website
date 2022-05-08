@@ -1,0 +1,30 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/jama.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Jama Masjid{% endblock %}
+
+{% block city %}Fatehpur Sikri{% endblock %}
+
+{% block desc %}
+
+The Jama Masjid is a 16th-century congregational mosque in the UNESCO World Heritage Site of Fatehpur Sikri in Uttar Pradesh, India. Constructed by Mughal Emperor Akbar, it is one of the largest mosques in India. It is the most sought after pilgrimage site by the devotees. It is also one of the most visited tourist destinations in Agra district. Some of the designs of the mosque reflect beautiful Iranian architecture.
+{% endblock %}

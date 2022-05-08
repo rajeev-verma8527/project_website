@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Parinirvana Stupa.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Parinirvana Stupa{% endblock %}
+
+{% block city %}Kushinagar{% endblock %}
+
+{% block desc %}
+The Parinirvana Stupa is a Buddhist temple in Kushinagar, India which is said to be the place of death of Gautama Buddha, the founder of Buddhism.[1] Alexander Cunningham gains the most attention for his work in the area, because he conclusively proved that Gautama Buddha had died in the area.[2] The present temple was built by the Indian Government in 1956 as part of the commemoration of the 2,500th year of the Mahaparinivana or 2500 BE (Buddhist Era). Inside this temple, there is a Reclining Buddha image lying on its right side with the head to the north. The statue is 6.1 m long and rests on a stone couch.
+{% endblock %}

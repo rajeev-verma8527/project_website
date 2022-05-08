@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/The_Golden_Temple_Sarnath.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Golden Temple{% endblock %}
+
+{% block city %}Sarnath{% endblock %}
+
+{% block desc %}
+Varanasi's Kashi Vishwanath Temple is also called the Golden Temple, thanks to its pure gold spire and dome. The current building dates from 1780, but temples stood in the same place for centuries. Dedicated to the Hindu Lord Shiva—one of the most significant deities in the Hindu pantheon—Kashi Vishwanath is a major pilgrimage site.
+{% endblock %}

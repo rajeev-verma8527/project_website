@@ -1,0 +1,29 @@
+{% if card %}
+    {% extends "cities/card_layout.html" %}
+{% else %}
+    {% extends "cities/full_layout.html" %}
+{% endif %}
+
+
+
+{% block link %}
+{{url_for('locations',location=template.split('/')[-1].split('.')[0])}}
+{% endblock %}
+
+
+{% block img %}
+{{ url_for('static',filename='images/Panch_Mahal.jpg') }}
+{% endblock %}
+
+
+{% block credit %}
+Credit
+{% endblock %}
+
+{% block name %}Panch Mahal{% endblock %}
+
+{% block city %}Fatehpur Sikri{% endblock %}
+
+{% block desc %}
+Panch Mahal is a palace in Fatehpur Sikri, Uttar Pradesh, India. The Panch Mahal meaning 'Five level Palace' was commissioned by Akbar. This structure stands close to the Zenana quarters which supports the supposition that it was used for entertainment and relaxation.
+{% endblock %}
