@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-app.secret_key = "key"
+app.secret_key = "this_is_a_totally_random_key_that_is_definitely_safe_and_secure"
 
 city_templates = get_tree(os.getcwd())
 all_locations = []
