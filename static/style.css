@@ -52,7 +52,7 @@ img.card-img-top{
 
 img.full_layout{
   object-fit: cover;
-  max-height: 50em;
+  height: 50em;
 }
 
 body{

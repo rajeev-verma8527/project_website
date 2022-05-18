@@ -55,5 +55,10 @@
     <p class="fs-2">Some interesting locations</p>
 
     {% include "album_layout.html" %}
+    {% if locations|length < 13 %}
+           
+    <button class="btn mt-5"><a href="{{url_for('index',all=True)}}" style="color:white ;">Show all</a></button>
+    {% endif %}
+    
 </div>
 {% endblock %}

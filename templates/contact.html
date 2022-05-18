@@ -1,26 +1,5 @@
 {% extends 'base.html' %}
 
-{% block headd %}
-
-<script>// Should only be triggered on first page load
-    console.log('ho');
-    
-    window.onload = function() {
-      document.getElementById('my-form').onsubmit = function() {
-        /* do what you want with the form */
-    
-        // Should be triggered on form submit
-        console.log('hi');
-        // You must return false to prevent the default form behavior
-        return false;
-      }
-    }
-</script>
-
-GET WEB ANALYTICS DATA SET FROM INTERNET
-
-{% endblock %}
-
 
 {% block title %}Contact{% endblock %}
 
@@ -29,7 +8,7 @@ GET WEB ANALYTICS DATA SET FROM INTERNET
 <div class="container-sm pb-5" id="contact">
     <p class="fs-1">Contact</p>
     {% include "notify.html" %}
-    <form method="post" id="my-form">
+    <form method="post" id="my-form" onsubmit="form_submit('contact')">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="John Doe" required minlength="2"

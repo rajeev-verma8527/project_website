@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from database import save_info
 from aggregate_templates import get_tree
 import os
+import random
 
 app = Flask(__name__)
 
@@ -15,7 +16,10 @@ for city in city_templates:
 
 @app.route("/")
 def index():
-    return render_template("index.html",locations=all_locations)
+    if request.args.get("all"):
+        return render_template("index.html",locations=all_locations)
+    else:
+        return render_template("index.html",locations=random.sample(all_locations,12))
 
 @app.route("/cities/<city>")
 def cities(city):
