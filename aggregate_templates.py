@@ -1,6 +1,6 @@
 import os
 
-def get_tree(cwd):
+def get_tree(cwd=os.getcwd()):
     path = os.path.join(cwd,"templates","cities")
     cities = [i for i in os.listdir(path) if not i.endswith(".html")]
     tree = {}

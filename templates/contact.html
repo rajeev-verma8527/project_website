@@ -8,7 +8,7 @@
 <div class="container-sm pb-5" id="contact">
     <p class="fs-1">Contact</p>
     {% include "notify.html" %}
-    <form method="post" id="my-form" onsubmit="form_submit('contact')">
+    <form method="post" tracking-name="contact">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="John Doe" required minlength="2"
